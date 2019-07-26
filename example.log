@@ -1,0 +1,794 @@
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:rasa_core.tracker_store:Creating a new tracker for id '1589508487838661'.
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 2 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: None
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '2'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+ERROR:rasa_core.processor:Encountered an exception while running action 'utter_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:send() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/actions/action.py", line 69, in run
+    filled_slots=tracker.current_slot_values())
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 123, in utter_template
+    self.utter_response(message)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 60, in utter_response
+    self.utter_message(message.get("text"))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 75, in utter_message
+    message_part)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 132, in send_text_message
+    self.send(recipient_id, elements.Text(text=message))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 124, in send
+    'RESPONSE')
+TypeError: send() takes 3 positional arguments but 4 were given
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:rasa_core.tracker_store:Creating a new tracker for id 'default'.
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 2 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: None
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '2'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id 'default'
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jaipu?' with intent '{'name': 'weather_inform', 'confidence': 0.8326051363604614}' and entities '[{'start': 23, 'end': 28, 'value': 'jaipu', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 7 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipu
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'slot_location_0': 1.0, 'prev_action_listen': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '5'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: It is currently Moderate or heavy rain shower in Jaipur at the moment. The temperature is 33.8 degrees, the humidity is 42.0% ., data: null)'
+DEBUG:rasa_core.processor:Action 'action_weather' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'slot_location_0': 1.0, 'prev_action_listen': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0, 'prev_action_weather': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:rasa_core.tracker_store:Creating a new tracker for id '1589508487838661'.
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 2 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: None
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '2'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+ERROR:rasa_core.processor:Encountered an exception while running action 'utter_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:send() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/actions/action.py", line 69, in run
+    filled_slots=tracker.current_slot_values())
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 123, in utter_template
+    self.utter_response(message)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 60, in utter_response
+    self.utter_message(message.get("text"))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 75, in utter_message
+    message_part)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 132, in send_text_message
+    self.send(recipient_id, elements.Text(text=message))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 124, in send
+    'RESPONSE')
+TypeError: send() takes 3 positional arguments but 4 were given
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jaipur?' with intent '{'name': 'weather_inform', 'confidence': 0.832104873004591}' and entities '[{'start': 23, 'end': 29, 'value': 'jaipur', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 7 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '5'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 1.00.
+ERROR:rasa_core.processor:Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:Expecting value: line 2 column 1 (char 1)
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/Downloads/rasa/weather_bot/actions.py", line 27, in run
+    forecast = client.getForecastWeather(q=location, days=7)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/apixu/client.py", line 47, in getForecastWeather
+    return self._get(url, args)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/apixu/client.py", line 23, in _get
+    json_res = response.json()
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+DEBUG:rasa_core.processor:Action 'action_weather' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jaipur?' with intent '{'name': 'weather_inform', 'confidence': 0.832104873004591}' and entities '[{'start': 23, 'end': 29, 'value': 'jaipur', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 11 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '5'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 1.00.
+ERROR:rasa_core.processor:Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:Expecting value: line 2 column 1 (char 1)
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/Downloads/rasa/weather_bot/actions.py", line 27, in run
+    forecast = client.getForecastWeather(q=location, days=7)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/apixu/client.py", line 47, in getForecastWeather
+    return self._get(url, args)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/apixu/client.py", line 23, in _get
+    json_res = response.json()
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+DEBUG:rasa_core.processor:Action 'action_weather' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jaipur?' with intent '{'name': 'weather_inform', 'confidence': 0.832104873004591}' and entities '[{'start': 23, 'end': 29, 'value': 'jaipur', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 15 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}, {'slot_location_0': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'entity_location': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 0.92.
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1305: calling reduce_any (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+DEBUG:rasa_core.tracker_store:Creating a new tracker for id '1589508487838661'.
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jaipur?' with intent '{'name': 'weather_inform', 'confidence': 0.832104873004591}' and entities '[{'start': 23, 'end': 29, 'value': 'jaipur', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 3 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, None, {}, {'entity_location': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: It is currently Moderate or heavy rain shower in Jaipur at the moment. The temperature is 34.3 degrees, the humidity is 41.0% .
+ERROR:rasa_core.processor:Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:send() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/Downloads/rasa/weather_bot/actions.py", line 59, in run
+    dispatcher.utter_message(response)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 75, in utter_message
+    message_part)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 132, in send_text_message
+    self.send(recipient_id, elements.Text(text=message))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 124, in send
+    'RESPONSE')
+TypeError: send() takes 3 positional arguments but 4 were given
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: It is currently Moderate or heavy rain shower in Jaipur at the moment. The temperature is 34.3 degrees, the humidity is 41.0% ., data: null)'
+DEBUG:rasa_core.processor:Action 'action_weather' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, {}, {'entity_location': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_weather': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 7 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, {}, {'entity_location': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_weather': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+ERROR:rasa_core.processor:Encountered an exception while running action 'utter_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:send() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/actions/action.py", line 69, in run
+    filled_slots=tracker.current_slot_values())
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 123, in utter_template
+    self.utter_response(message)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 60, in utter_response
+    self.utter_message(message.get("text"))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 75, in utter_message
+    message_part)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 132, in send_text_message
+    self.send(recipient_id, elements.Text(text=message))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 124, in send
+    'RESPONSE')
+TypeError: send() takes 3 positional arguments but 4 were given
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{}, {'entity_location': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_weather': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 11 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'entity_location': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_weather': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+ERROR:rasa_core.processor:Encountered an exception while running action 'utter_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+ERROR:rasa_core.processor:send() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/actions/action.py", line 69, in run
+    filled_slots=tracker.current_slot_values())
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 123, in utter_template
+    self.utter_response(message)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 60, in utter_response
+    self.utter_message(message.get("text"))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/dispatcher.py", line 75, in utter_message
+    message_part)
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 132, in send_text_message
+    self.send(recipient_id, elements.Text(text=message))
+  File "/home/shonak/anaconda3/envs/rasanlu/lib/python3.6/site-packages/rasa_core/channels/facebook.py", line 124, in send
+    'RESPONSE')
+TypeError: send() takes 3 positional arguments but 4 were given
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'prev_action_weather': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'intent_weather_inform': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'slot_location_0': 1.0, 'intent_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
+INFO:rasa_nlu.components:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+DEBUG:rasa_core.tracker_store:Creating a new tracker for id '1589508487838661'.
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 2 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: None
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '2'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 1.00.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998004407, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEIYt1kOvzPs1QbM', 'seq': 58382, 'text': 'Hello! How can I help?'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the weather in jodhpur?' with intent '{'name': 'weather_inform', 'confidence': 0.8863011363909742}' and entities '[{'start': 23, 'end': 30, 'value': 'jodhpur', 'entity': 'location', 'confidence': 0.9864222987638421, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 7 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jodhpur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: None
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '5'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_weather' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: It is currently Moderate or heavy rain shower in Jodhpur at the moment. The temperature is 33.9 degrees, the humidity is 47.0% .
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: It is currently Moderate or heavy rain shower in Jodhpur at the moment. The temperature is 33.9 degrees, the humidity is 47.0% ., data: null)'
+DEBUG:rasa_core.processor:Action 'action_weather' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is a memorised next action '0'
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_0_MemoizationPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998044891, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEK221kOv1t7cbxP', 'seq': 58386, 'text': 'It is currently Moderate or heavy rain shower in Jodhpur at the moment. The temperature is 33.9 degrees, the humidity is 47.0% .'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the temperature in jaipur?' with intent '{'name': 'weather_temp', 'confidence': 0.9595908605598665}' and entities '[{'start': 12, 'end': 23, 'value': 'temperature', 'entity': 'temperature', 'confidence': 0.9935608002897743, 'extractor': 'ner_crf'}, {'start': 27, 'end': 33, 'value': 'jaipur', 'entity': 'location', 'confidence': 0.9863537714366051, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 13 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: jaipur
+	location1: None
+	location2: None
+	maximum_temperature: None
+	minimum_temperature: None
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'slot_location_0': 1.0}, {'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_temp' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Currently, the temperature in Jaipur is 33.7 degrees centigrade.
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Currently, the temperature in Jaipur is 33.7 degrees centigrade., data: null)'
+DEBUG:rasa_core.processor:Action 'action_temp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'slot_location_0': 1.0}, {'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_temp': 1.0, 'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998068325, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEMSZVkOv3JE_bBw', 'seq': 58390, 'text': 'Currently, the temperature in Jaipur is 33.7 degrees centigrade.'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the maximum temperature in goa?' with intent '{'name': 'weather_max_temp', 'confidence': 0.8706502588404105}' and entities '[{'start': 12, 'end': 31, 'value': 'maximum temperature', 'entity': 'maximum_temperature', 'confidence': 0.9627129528191177, 'extractor': 'ner_crf'}, {'start': 35, 'end': 38, 'value': 'goa', 'entity': 'location', 'confidence': 0.9890831358481392, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 19 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: goa
+	location1: None
+	location2: None
+	maximum_temperature: maximum temperature
+	minimum_temperature: None
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_weather_inform': 1.0, 'entity_location': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'intent_weather_inform': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'slot_location_0': 1.0}, {'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_temp': 1.0, 'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_listen': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_max_temp' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Today, the maximum temperature in Goa would be 28.9 degrees centigrade
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Today, the maximum temperature in Goa would be 28.9 degrees centigrade, data: null)'
+DEBUG:rasa_core.processor:Action 'action_max_temp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_weather_inform': 1.0, 'entity_location': 1.0, 'prev_action_weather': 1.0, 'slot_location_0': 1.0}, {'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_temp': 1.0, 'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_listen': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_max_temp': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998466315, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEklC1kOwPcATqYk', 'seq': 58398, 'text': 'Today, the maximum temperature in Goa would be 28.9 degrees centigrade'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what is the minimum temperature in delhi?' with intent '{'name': 'weather_min_temp', 'confidence': 0.974543547223444}' and entities '[{'start': 12, 'end': 31, 'value': 'minimum temperature', 'entity': 'minimum_temperature', 'confidence': 0.9905113448699518, 'extractor': 'ner_crf'}, {'start': 35, 'end': 40, 'value': 'delhi', 'entity': 'location', 'confidence': 0.9863540761577636, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 25 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: delhi
+	location1: None
+	location2: None
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'prev_action_temp': 1.0, 'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_listen': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_max_temp': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_min_temp' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Today, the minimum temperature in Delhi would be 36.3 degrees centigrade
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Today, the minimum temperature in Delhi would be 36.3 degrees centigrade, data: null)'
+DEBUG:rasa_core.processor:Action 'action_min_temp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'prev_action_temp': 1.0, 'slot_temperature_0': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'entity_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_listen': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_max_temp': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'prev_action_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'slot_location_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998488913, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEl9UVkOwQ0TLArE', 'seq': 58402, 'text': 'Today, the minimum temperature in Delhi would be 36.3 degrees centigrade'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'would delhi be hotter than bengaluru tomorrow?' with intent '{'name': 'weather_temp', 'confidence': 0.37859086441422474}' and entities '[{'start': 27, 'end': 36, 'value': 'bengaluru', 'entity': 'location2', 'confidence': 0.8874502526820184, 'extractor': 'ner_crf'}, {'start': 37, 'end': 45, 'value': 'tomorrow', 'entity': 'date', 'confidence': 0.8812074235813988, 'extractor': 'ner_crf'}, {'start': 37, 'end': 45, 'text': 'tomorrow', 'value': '2018-06-27T00:00:00.000Z', 'confidence': 1.0, 'additional_info': {'value': '2018-06-27T00:00:00.000Z', 'grain': 'day', 'others': [{'grain': 'day', 'value': '2018-06-27T00:00:00.000Z'}]}, 'entity': 'time', 'extractor': 'ner_duckling'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 30 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: delhi
+	location1: None
+	location2: bengaluru
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_listen': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_max_temp': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'prev_action_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_temp': 1.0, 'entity_location2': 1.0, 'slot_location_0': 1.0, 'entity_time': 1.0, 'prev_action_listen': 1.0, 'entity_date': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 0.42.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.7315895398358091}' and entities '[]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 32 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: None
+	condition: None
+	forecast: None
+	location: delhi
+	location1: None
+	location2: bengaluru
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'intent_weather_max_temp': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'prev_action_max_temp': 1.0, 'entity_maximum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'prev_action_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_temp': 1.0, 'entity_location2': 1.0, 'slot_location_0': 1.0, 'entity_time': 1.0, 'prev_action_listen': 1.0, 'entity_date': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'utter_greet' with prob 0.88.
+INFO:rasa_core.channels.facebook:Sending message: Hello! How can I help?
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Hello! How can I help?, data: null)'
+DEBUG:rasa_core.processor:Action 'utter_greet' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'prev_action_listen': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'prev_action_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_temp': 1.0, 'entity_location2': 1.0, 'slot_location_0': 1.0, 'entity_time': 1.0, 'prev_action_listen': 1.0, 'entity_date': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_utter_greet': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998609947, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEtWG1kOwYNGJy8W', 'seq': 58409, 'text': 'Hello! How can I help?'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'is delhi hotter than bengaluru?' with intent '{'name': 'weather_comparison', 'confidence': 0.8331760013254085}' and entities '[{'start': 3, 'end': 8, 'value': 'delhi', 'entity': 'location1', 'confidence': 0.9932244356024884, 'extractor': 'ner_crf'}, {'start': 9, 'end': 15, 'value': 'hotter', 'entity': 'compare', 'confidence': 0.9947856420475718, 'extractor': 'ner_crf'}, {'start': 21, 'end': 30, 'value': 'bengaluru', 'entity': 'location2', 'confidence': 0.9418639806085605, 'extractor': 'ner_crf'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 39 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: hotter
+	condition: None
+	forecast: None
+	location: delhi
+	location1: delhi
+	location2: bengaluru
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'entity_location': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_min_temp': 1.0, 'prev_action_min_temp': 1.0, 'entity_minimum_temperature': 1.0, 'slot_location_0': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_temp': 1.0, 'entity_location2': 1.0, 'slot_location_0': 1.0, 'entity_time': 1.0, 'prev_action_listen': 1.0, 'entity_date': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_utter_greet': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_temp_comp' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6.
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6., data: null)'
+DEBUG:rasa_core.processor:Action 'action_temp_comp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_minimum_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'slot_temperature_0': 1.0, 'intent_weather_temp': 1.0, 'entity_location2': 1.0, 'slot_location_0': 1.0, 'entity_time': 1.0, 'prev_action_listen': 1.0, 'entity_date': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_utter_greet': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529998626434, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbEuWglkOwZNggw3B', 'seq': 58413, 'text': 'Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6.'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'would jaipur be hotter than bengaluru tomorrow?' with intent '{'name': 'weather_temp', 'confidence': 0.37658100683115225}' and entities '[{'start': 28, 'end': 37, 'value': 'bengaluru', 'entity': 'location2', 'confidence': 0.8874502526820184, 'extractor': 'ner_crf'}, {'start': 38, 'end': 46, 'value': 'tomorrow', 'entity': 'date', 'confidence': 0.8812074235813988, 'extractor': 'ner_crf'}, {'start': 38, 'end': 46, 'text': 'tomorrow', 'value': '2018-06-27T00:00:00.000Z', 'confidence': 1.0, 'additional_info': {'value': '2018-06-27T00:00:00.000Z', 'grain': 'day', 'others': [{'grain': 'day', 'value': '2018-06-27T00:00:00.000Z'}]}, 'entity': 'time', 'extractor': 'ner_duckling'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 44 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: hotter
+	condition: None
+	forecast: None
+	location: delhi
+	location1: delhi
+	location2: bengaluru
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_action_listen': 1.0}, {'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_utter_greet': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_temp_comp' with prob 0.82.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6.
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6., data: null)'
+DEBUG:rasa_core.processor:Action 'action_temp_comp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_maximum_temperature_0': 1.0, 'slot_location2_0': 1.0, 'intent_greet': 1.0, 'slot_location_0': 1.0, 'prev_utter_greet': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529999046831, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbFIAr1kOwy3rdiMM', 'seq': 58420, 'text': 'Delhi is hotter than Bengaluru.The temperature in Delhi is 40.4 whereas in Bengaluru is 23.6.'}}
+DEBUG:rasa_core.tracker_store:Recreating tracker for id '1589508487838661'
+DEBUG:rasa_core.processor:Received user message 'what would be the temperature of delhi tomorrow?' with intent '{'name': 'weather_temp', 'confidence': 0.964077837353618}' and entities '[{'start': 18, 'end': 29, 'value': 'temperature', 'entity': 'temperature', 'confidence': 0.9852503215705584, 'extractor': 'ner_crf'}, {'start': 33, 'end': 38, 'value': 'delhi', 'entity': 'location', 'confidence': 0.9942653335193824, 'extractor': 'ner_crf'}, {'start': 39, 'end': 47, 'value': 'tomorrow', 'entity': 'date', 'confidence': 0.9479903716665508, 'extractor': 'ner_crf'}, {'start': 39, 'end': 47, 'text': 'tomorrow', 'value': '2018-06-27T00:00:00.000Z', 'confidence': 1.0, 'additional_info': {'value': '2018-06-27T00:00:00.000Z', 'grain': 'day', 'others': [{'grain': 'day', 'value': '2018-06-27T00:00:00.000Z'}]}, 'entity': 'time', 'extractor': 'ner_duckling'}]'
+DEBUG:rasa_core.processor:Logged UserUtterance - tracker now has 50 events
+DEBUG:rasa_core.processor:Current slot values: 
+	compare: hotter
+	condition: None
+	forecast: None
+	location: delhi
+	location1: delhi
+	location2: bengaluru
+	maximum_temperature: maximum temperature
+	minimum_temperature: minimum temperature
+	no_of_days: None
+	temperature: temperature
+	weather: None
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_temperature': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_temp' with prob 1.00.
+INFO:rasa_core.trackers:Tried to access non existent slot 'date'
+INFO:rasa_core.channels.facebook:Sending message: Currently, the temperature in Delhi is 40.4 degrees centigrade.
+DEBUG:rasa_core.processor:Bot utterance 'BotUttered(text: Currently, the temperature in Delhi is 40.4 degrees centigrade., data: null)'
+DEBUG:rasa_core.processor:Action 'action_temp' ended with events '[]'
+DEBUG:rasa_core.policies.memoization:Current tracker state [{'slot_maximum_temperature_0': 1.0, 'entity_compare': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_location1': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'intent_weather_comparison': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'prev_action_temp_comp': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'entity_location2': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_temperature': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0, 'prev_action_listen': 1.0}, {'slot_maximum_temperature_0': 1.0, 'entity_temperature': 1.0, 'slot_location1_0': 1.0, 'entity_date': 1.0, 'prev_action_temp': 1.0, 'entity_location': 1.0, 'intent_weather_temp': 1.0, 'slot_location_0': 1.0, 'slot_compare_0': 1.0, 'entity_time': 1.0, 'slot_minimum_temperature_0': 1.0, 'slot_temperature_0': 1.0, 'slot_location2_0': 1.0}]
+DEBUG:rasa_core.policies.memoization:There is no memorised next action
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_date' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.featurizers:Feature 'entity_time' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+DEBUG:rasa_core.policies.ensemble:Predicted next action using policy_1_KerasPolicy
+DEBUG:rasa_core.policies.ensemble:Predicted next action 'action_listen' with prob 1.00.
+DEBUG:rasa_core.processor:Action 'action_listen' ended with events '[]'
+DEBUG:rasa_core.processor:Current topic: None
+WARNING:rasa_core.channels.facebook:Received a message from facebook that we can not handle. Message: {'sender': {'id': '2051592175109669'}, 'recipient': {'id': '1589508487838661'}, 'timestamp': 1529999101562, 'message': {'is_echo': True, 'app_id': 1824313714295028, 'mid': 'mid.$cAAcTGs8vki1qbFLWelkOw2NjXnYu', 'seq': 58425, 'text': 'Currently, the temperature in Delhi is 40.4 degrees centigrade.'}}
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt
+INFO:tensorflow:Restoring parameters from ./models/nlu/default/weathernlu/intent_classifier_tensorflow_embedding.ckpt

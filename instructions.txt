@@ -1,0 +1,25 @@
+step 1 : make a new conda environment with python=3.6
+e.g conda create -n <environment_name> python=3.6
+
+step 1a :go to that environment 
+e.g source activate <name>
+
+step 2 : go to rasa_core directory && install the required python libraries .
+e.g  pip install -r requirements.txt
+
+step 3 : install the rasa_core 
+e.g pip install -e .
+
+step 4 : go to rasa_nlu directory && install the required python libraries .
+e.g  pip install -r requirements.txt
+
+step 5 : install the rasa_nlu 
+e.g pip install -e .
+
+step 6 : install the spacy module and englsh model 
+
+pip install spacy
+python -m spacy download en_core_web_md
+python -m spacy link en_core_web_md en
+
+pip install duckling

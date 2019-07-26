@@ -1,0 +1,99 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- utter_ask_location
+- action_weather
+- action_temp
+- action_max_temp
+- action_min_temp
+- action_weather_cond
+- action_temp_comp
+- action_humid
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_location
+- actions.ActionWeather
+- actions.ActionTemp
+- actions.ActionMaxTemp
+- actions.ActionMinTemp
+- actions.ActionWeatherCondition
+- actions.ActionTempComp
+- actions.ActionHumid
+config:
+  store_entities_as_slots: true
+entities:
+- location
+- temperature
+- weather
+- minimum_temperature
+- maximum_temperature
+- no_of_days
+- condition
+- forecast
+- compare
+- location1
+- location2
+- date
+- humidity
+intents:
+- greet
+- goodbye
+- weather_inform
+- weather_max_temp
+- weather_min_temp
+- weather_condition
+- weather_comparison
+- weather_temp
+- weather_location
+- weather_humidity
+slots:
+  compare:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  condition:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  forecast:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  humidity:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location1:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location2:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  maximum_temperature:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  minimum_temperature:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  no_of_days:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  temperature:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  weather:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: In what location?
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye :(
+  utter_greet:
+  - text: Hello! How can I help?
+  - text: Hey buddy! How you doin?

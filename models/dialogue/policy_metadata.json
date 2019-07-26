@@ -1,0 +1,100 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "date",
+        "minimum_temperature",
+        "no_of_days",
+        "condition",
+        "humidity",
+        "location2",
+        "maximum_temperature",
+        "location",
+        "temperature",
+        "weather",
+        "location1",
+        "forecast",
+        "compare"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": [
+        "location"
+      ]
+    },
+    "action_max_temp": {
+      "slots": [
+        "maximum_temperature",
+        "date",
+        "location"
+      ]
+    },
+    "action_temp": {
+      "slots": [
+        "date",
+        "location",
+        "temperature"
+      ]
+    },
+    "action_temp_comp": {
+      "slots": [
+        "date",
+        "location2",
+        "location",
+        "location1",
+        "compare"
+      ]
+    },
+    "action_weather": {
+      "slots": [
+        "date",
+        "no_of_days",
+        "location",
+        "weather",
+        "forecast"
+      ]
+    },
+    "action_min_temp": {
+      "slots": [
+        "date",
+        "minimum_temperature",
+        "location"
+      ]
+    },
+    "action_weather_cond": {
+      "slots": [
+        "condition",
+        "date",
+        "location"
+      ]
+    },
+    "utter_greet": {
+      "slots": [
+        "location"
+      ]
+    },
+    "null": {
+      "slots": [
+        "location"
+      ]
+    },
+    "action_humid": {
+      "slots": [
+        "humidity",
+        "date",
+        "location",
+        "humid"
+      ]
+    }
+  },
+  "rasa_core": "0.10.1",
+  "max_histories": [
+    5,
+    5
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ]
+}

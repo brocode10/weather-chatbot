@@ -1,0 +1,76 @@
+slots:
+  location:
+    type: text
+  temperature:
+    type: text
+  weather:
+    type: text
+  minimum_temperature:
+    type: text
+  maximum_temperature:
+    type: text
+  no_of_days:
+    type: text
+  condition:
+    type: text
+  forecast:
+    type: text
+  compare:         #hotter/colder/cooler
+    type: text
+  location1:
+    type: text
+  location2:
+    type: text
+  date:
+    type: text
+  humidity:
+    type: text
+
+intents:
+ - greet
+ - goodbye
+ - weather_inform  #whole weather
+ - weather_max_temp  #max temp of the day
+ - weather_min_temp   #min temp of the day
+ - weather_condition  #sunny/windy/snowny/etc
+ - weather_comparison  #comp b/w 2 location
+ - weather_temp        #temp of the location    
+ - weather_location   #location
+ - weather_humidity
+entities:
+ - location
+ - temperature
+ - weather
+ - minimum_temperature
+ - maximum_temperature
+ - no_of_days
+ - condition
+ - forecast
+ - compare
+ - location1
+ - location2
+ - date
+ - humidity
+
+templates:
+  utter_greet:
+    - 'Hello! How can I help?'
+    - 'Hey buddy! How you doin?'
+  utter_goodbye:
+    - 'Talk to you later.'
+    - 'Bye bye :('
+  utter_ask_location:
+    - 'In what location?'
+
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_ask_location
+ - actions.ActionWeather
+ - actions.ActionTemp
+ - actions.ActionMaxTemp
+ - actions.ActionMinTemp
+ - actions.ActionWeatherCondition
+ - actions.ActionTempComp
+ - actions.ActionHumid

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/shonak/repos/Chatbots/weather_bot/models/nlu/weathernlu/component_5_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "/home/shonak/repos/Chatbots/weather_bot/models/nlu/weathernlu/component_5_EmbeddingIntentClassifier.ckpt"
