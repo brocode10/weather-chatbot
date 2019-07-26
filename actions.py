@@ -20,7 +20,7 @@ class ActionWeather(Action):
 
 	def run(self, dispatcher, tracker, domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306' #your apixu key
+		api_key = 'xxxx' #your apixu key
 		client = ApixuClient(api_key)
 
 		location = tracker.get_slot('location')
@@ -86,7 +86,7 @@ class ActionTemp(Action):
 		return 'action_temp'
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 		client = ApixuClient(api_key)
 		location = tracker.get_slot('location')
 		forecast = client.getForecastWeather(q=location, days=7)
@@ -121,7 +121,7 @@ class ActionMaxTemp(Action):
 		return 'action_max_temp'
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 
 		client = ApixuClient(api_key)
 
@@ -167,7 +167,7 @@ class ActionMinTemp(Action):
 		return 'action_min_temp'
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 
 		client = ApixuClient(api_key)
 
@@ -213,7 +213,7 @@ class ActionWeatherCondition(Action):
 		return 'action_weather_cond'
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 
 		client = ApixuClient(api_key)
 		location = tracker.get_slot('location')
@@ -266,7 +266,7 @@ class ActionTempComp(Action):
 
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 
 		client = ApixuClient(api_key)
 		response=''
@@ -336,7 +336,7 @@ class ActionHumid(Action):
 		return 'action_humid'
 	def run(self,dispatcher,tracker,domain):
 		from apixu.client import ApixuClient
-		api_key = '46e6547f38a84adfad7122430181306'
+		api_key = 'xxxx'
 		client = ApixuClient(api_key)
 		location = tracker.get_slot('location')
 		forecast = client.getForecastWeather(q=location, days=7)
